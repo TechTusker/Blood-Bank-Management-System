@@ -1,0 +1,1766 @@
+<html> <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <meta name="robots" content="noindex" />
+                <title>Oracle Live SQL - Script: Blood Bank Management System</title>
+                <link rel="stylesheet" href="https://livesql.oracle.com/apex/livesql/get_ws_file/livesql-web.css" />
+                <link rel="stylesheet" href="https://static.oracle.com/cdn/fnd/gallery/2304.0.0/OracleFont/OracleFont.min.css" type="text/css" />
+                <script src="https://livesql.oracle.com/apex/livesql/get_ws_file/highlight.pack.js" type="text/javascript"></script>
+                              <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="BUM28-7GUGJ-B7YY7-XUSPX-EJ96D",function(){function e(){if(!o){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,i.parentNode.appendChild(e),o=!0}}function t(e){o=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(i.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",i.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"BUM28-7GUGJ-B7YY7-XUSPX-EJ96D";var i=document.currentScript||document.getElementsByTagName("script")[0],o=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!o)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),i.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="oxc2whixa3nsczfsnahq-f-53a0ded86-clientnsv4-s.akamaihd.net",i="false"=="true"?2:1,o={"ak.v":"36","ak.cp":"881309","ak.ai":parseInt("562634",10),"ak.ol":"0","ak.cr":43,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"7e751e0","ak.r":17381,"ak.a2":n,"ak.m":"dscx","ak.n":"essl","ak.bpcip":"117.197.171.0","ak.cport":59631,"ak.gh":"117.239.91.79","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1689413647","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==nm9H3IM36sSCls1usgvhBbPoF2coYhL3Obt4akmfukSr7YmJuvlSUuQ/OPo6Hc+m2yOLJ9SP1w23dalhJNrUcVVuwIKBvcctoZ9AHnnj2rYIDHOAvh/wyp8hQPm+7CBd/ZE5cnKJAkDzKEbX2aUNATwpRGdU2pZj7jTSnbr3AiAbH+roRMMxuDHsnVnha/QO8Yb8ux6GX3o+j2G4srBckR76pdip8ZuZR2OKZHhQ+tHRT3ySKNkHxRwSBCE3GHKRg+L4+1q2l+LCTFYb70zTjB2eZNVuFNcJww65RqCN0vL2YtL2IGdMgDQQFtSDLITt9PSIqoBgVOri6zi7OCl5vuV4vKj6w1wQUN9fhVWvCGQTi7K7RoWrZKSQHGE9watqt269OgIzkHJqflKUs3a4pYMXqPBBPVzU0SkQYfJOQW8=","ak.pv":"13","ak.dpoabenc":"","ak.tf":i};if(""!==t)o["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))o["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(o)},rv:function(){var e=["ak.bpcip","ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:o,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head><body><div class="ls-Header">
+                    <a href="https://livesql.oracle.com/apex/f?p=590:::::::" class="ls-Logo">Live SQL</a></div><div class="ls-Body">
+                <div class="ls-Title">
+                    <h1 class="ls-Title-text">Blood Bank Management System</h1>
+                    <div class="ls-Title-buttons">
+                        <a class="ls-Button" href="https://livesql.oracle.com/apex/f?p=590:49::::RP,49:P49_TYPES:C">View All Public Scripts</a>
+                        <a class="ls-Button is-hot" href="https://livesql.oracle.com/apex/f?p=590:41:0:::41:SHAREKEY:7JHBR0O2KJAYWBROXIRXVTT" target="_blank">Login to Run Script</a>
+                    </div>
+                </div><ul class="ls-Details"><li>
+                    <span class="ls-Details-label">Script Name</span>
+                    <span class="ls-Details-value">Blood Bank Management System</span>
+                </li><li>
+                    <span class="ls-Details-label">Visibility</span>
+                    <span class="ls-Details-value">Unlisted - anyone with the share link can access</span>
+                </li><li>
+                    <span class="ls-Details-label">Description</span>
+                    <span class="ls-Details-value">I tried making a basic blood bank management system using SQL. This is a basic project but I think it was a good start for learning and practicing SQL. Through this project, I became comfortable with SQL and also learnt about database management system.</span>
+                </li><li>
+                    <span class="ls-Details-label">Contributor</span>
+                    <span class="ls-Details-value">Aarti Mittal</span>
+                </li><li>
+                    <span class="ls-Details-label">Created</span>
+                    <span class="ls-Details-value">Monday    April     24, 2023</span>
+                </li></ul><ul class="s-Session s-Session--statements"><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">1</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table donor( 
+    id number(5) primary key, 
+    name varchar(20), 
+    phone_no number(10), 
+    email varchar(30), 
+    dob date, 
+    pwd varchar(20), 
+    blood_group varchar(5) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">2</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc donor</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE DONOR<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332442446996452798111955719381405685267">Column</th><th id="Null?_332442446996452798111955719381405685267">Null?</th><th id="Type_332442446996452798111955719381405685267">Type</th></tr></td><td headers="Column_332442446996452798111955719381405685267">ID</td><td headers="Null?_332442446996452798111955719381405685267">NOT NULL</td><td headers="Type_332442446996452798111955719381405685267">NUMBER(5,0)</td></tr></td><td headers="Column_332442446996452798111955719381405685267">NAME</td><td headers="Null?_332442446996452798111955719381405685267"> - </td><td headers="Type_332442446996452798111955719381405685267">VARCHAR2(20)</td></tr></td><td headers="Column_332442446996452798111955719381405685267">PHONE_NO</td><td headers="Null?_332442446996452798111955719381405685267"> - </td><td headers="Type_332442446996452798111955719381405685267">NUMBER(10,0)</td></tr></td><td headers="Column_332442446996452798111955719381405685267">EMAIL</td><td headers="Null?_332442446996452798111955719381405685267"> - </td><td headers="Type_332442446996452798111955719381405685267">VARCHAR2(30)</td></tr></td><td headers="Column_332442446996452798111955719381405685267">DOB</td><td headers="Null?_332442446996452798111955719381405685267"> - </td><td headers="Type_332442446996452798111955719381405685267">DATE</td></tr></td><td headers="Column_332442446996452798111955719381405685267">PWD</td><td headers="Null?_332442446996452798111955719381405685267"> - </td><td headers="Type_332442446996452798111955719381405685267">VARCHAR2(20)</td></tr></td><td headers="Column_332442446996452798111955719381405685267">BLOOD_GROUP</td><td headers="Null?_332442446996452798111955719381405685267"> - </td><td headers="Type_332442446996452798111955719381405685267">VARCHAR2(5)</td></tr>
+</table><br />7 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">3</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table recipient( 
+    id number(5) primary key, 
+    name varchar(20), 
+    phone_no number(10), 
+    email varchar(30), 
+    blood_group varchar(5) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">4</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc recipient</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE RECIPIENT<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332442698836428271644372925488836937271">Column</th><th id="Null?_332442698836428271644372925488836937271">Null?</th><th id="Type_332442698836428271644372925488836937271">Type</th></tr></td><td headers="Column_332442698836428271644372925488836937271">ID</td><td headers="Null?_332442698836428271644372925488836937271">NOT NULL</td><td headers="Type_332442698836428271644372925488836937271">NUMBER(5,0)</td></tr></td><td headers="Column_332442698836428271644372925488836937271">NAME</td><td headers="Null?_332442698836428271644372925488836937271"> - </td><td headers="Type_332442698836428271644372925488836937271">VARCHAR2(20)</td></tr></td><td headers="Column_332442698836428271644372925488836937271">PHONE_NO</td><td headers="Null?_332442698836428271644372925488836937271"> - </td><td headers="Type_332442698836428271644372925488836937271">NUMBER(10,0)</td></tr></td><td headers="Column_332442698836428271644372925488836937271">EMAIL</td><td headers="Null?_332442698836428271644372925488836937271"> - </td><td headers="Type_332442698836428271644372925488836937271">VARCHAR2(30)</td></tr></td><td headers="Column_332442698836428271644372925488836937271">BLOOD_GROUP</td><td headers="Null?_332442698836428271644372925488836937271"> - </td><td headers="Type_332442698836428271644372925488836937271">VARCHAR2(5)</td></tr>
+</table><br />5 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">5</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table request( 
+    id1 number(5), 
+    id2 number(5), 
+    foreign key(id1) references donor(id)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00907: missing right parenthesis 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">6</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">    foreign key(id2) references recipient(id); </code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">Invalid statement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">7</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">); </code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">Invalid statement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">8</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc request</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-20001: object REQUEST does not exist</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">9</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table request( 
+    id1 number(5), 
+    id2 number(5), 
+    foreign key(id1) references donor(id), 
+    foreign key(id2) references recipient(id) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">10</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc request</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE REQUEST<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332443379013702987739405142543189418254">Column</th><th id="Null?_332443379013702987739405142543189418254">Null?</th><th id="Type_332443379013702987739405142543189418254">Type</th></tr></td><td headers="Column_332443379013702987739405142543189418254">ID1</td><td headers="Null?_332443379013702987739405142543189418254"> - </td><td headers="Type_332443379013702987739405142543189418254">NUMBER(5,0)</td></tr></td><td headers="Column_332443379013702987739405142543189418254">ID2</td><td headers="Null?_332443379013702987739405142543189418254"> - </td><td headers="Type_332443379013702987739405142543189418254">NUMBER(5,0)</td></tr>
+</table><br />2 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">11</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table Organization( 
+    oid number(5), 
+    contact_id number(10), 
+    email varchar(30), 
+    state varchar(20), 
+    address varchar(50), 
+    city varchar(20), 
+    primary key(oid) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">12</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc organization</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE ORGANIZATION<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332443990435950275500592008234971211950">Column</th><th id="Null?_332443990435950275500592008234971211950">Null?</th><th id="Type_332443990435950275500592008234971211950">Type</th></tr></td><td headers="Column_332443990435950275500592008234971211950">OID</td><td headers="Null?_332443990435950275500592008234971211950">NOT NULL</td><td headers="Type_332443990435950275500592008234971211950">NUMBER(5,0)</td></tr></td><td headers="Column_332443990435950275500592008234971211950">CONTACT_ID</td><td headers="Null?_332443990435950275500592008234971211950"> - </td><td headers="Type_332443990435950275500592008234971211950">NUMBER(10,0)</td></tr></td><td headers="Column_332443990435950275500592008234971211950">EMAIL</td><td headers="Null?_332443990435950275500592008234971211950"> - </td><td headers="Type_332443990435950275500592008234971211950">VARCHAR2(30)</td></tr></td><td headers="Column_332443990435950275500592008234971211950">STATE</td><td headers="Null?_332443990435950275500592008234971211950"> - </td><td headers="Type_332443990435950275500592008234971211950">VARCHAR2(20)</td></tr></td><td headers="Column_332443990435950275500592008234971211950">ADDRESS</td><td headers="Null?_332443990435950275500592008234971211950"> - </td><td headers="Type_332443990435950275500592008234971211950">VARCHAR2(50)</td></tr></td><td headers="Column_332443990435950275500592008234971211950">CITY</td><td headers="Null?_332443990435950275500592008234971211950"> - </td><td headers="Type_332443990435950275500592008234971211950">VARCHAR2(20)</td></tr>
+</table><br />6 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">13</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table donation( 
+    id number primary key, 
+    certificate_id number(4), 
+    name varchar(20), 
+    phone_no number(10), 
+    email varchar(20), 
+    dob date, 
+    pwd varchar(30), 
+    blood_group varchar(5), 
+    oid1 int, 
+    foreign key(oid1) references organization(oid) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">14</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc donation</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE DONATION<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332443890268942621628751610485795780725">Column</th><th id="Null?_332443890268942621628751610485795780725">Null?</th><th id="Type_332443890268942621628751610485795780725">Type</th></tr></td><td headers="Column_332443890268942621628751610485795780725">ID</td><td headers="Null?_332443890268942621628751610485795780725">NOT NULL</td><td headers="Type_332443890268942621628751610485795780725">NUMBER</td></tr></td><td headers="Column_332443890268942621628751610485795780725">CERTIFICATE_ID</td><td headers="Null?_332443890268942621628751610485795780725"> - </td><td headers="Type_332443890268942621628751610485795780725">NUMBER(4,0)</td></tr></td><td headers="Column_332443890268942621628751610485795780725">NAME</td><td headers="Null?_332443890268942621628751610485795780725"> - </td><td headers="Type_332443890268942621628751610485795780725">VARCHAR2(20)</td></tr></td><td headers="Column_332443890268942621628751610485795780725">PHONE_NO</td><td headers="Null?_332443890268942621628751610485795780725"> - </td><td headers="Type_332443890268942621628751610485795780725">NUMBER(10,0)</td></tr></td><td headers="Column_332443890268942621628751610485795780725">EMAIL</td><td headers="Null?_332443890268942621628751610485795780725"> - </td><td headers="Type_332443890268942621628751610485795780725">VARCHAR2(20)</td></tr></td><td headers="Column_332443890268942621628751610485795780725">DOB</td><td headers="Null?_332443890268942621628751610485795780725"> - </td><td headers="Type_332443890268942621628751610485795780725">DATE</td></tr></td><td headers="Column_332443890268942621628751610485795780725">PWD</td><td headers="Null?_332443890268942621628751610485795780725"> - </td><td headers="Type_332443890268942621628751610485795780725">VARCHAR2(30)</td></tr></td><td headers="Column_332443890268942621628751610485795780725">BLOOD_GROUP</td><td headers="Null?_332443890268942621628751610485795780725"> - </td><td headers="Type_332443890268942621628751610485795780725">VARCHAR2(5)</td></tr></td><td headers="Column_332443890268942621628751610485795780725">OID1</td><td headers="Null?_332443890268942621628751610485795780725"> - </td><td headers="Type_332443890268942621628751610485795780725">NUMBER</td></tr>
+</table><br />9 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">15</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table organizes( 
+    oid1 number(5), 
+    cid number(5) primary key, 
+    date1 date, 
+    timer date, 
+    info varchar(30), 
+    venue varchar(30), 
+    name varchar(30), 
+    foreign key(oid1) references organization(oid) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">16</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc organizes</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE ORGANIZES<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332445182293317884858197428348653698469">Column</th><th id="Null?_332445182293317884858197428348653698469">Null?</th><th id="Type_332445182293317884858197428348653698469">Type</th></tr></td><td headers="Column_332445182293317884858197428348653698469">OID1</td><td headers="Null?_332445182293317884858197428348653698469"> - </td><td headers="Type_332445182293317884858197428348653698469">NUMBER(5,0)</td></tr></td><td headers="Column_332445182293317884858197428348653698469">CID</td><td headers="Null?_332445182293317884858197428348653698469">NOT NULL</td><td headers="Type_332445182293317884858197428348653698469">NUMBER(5,0)</td></tr></td><td headers="Column_332445182293317884858197428348653698469">DATE1</td><td headers="Null?_332445182293317884858197428348653698469"> - </td><td headers="Type_332445182293317884858197428348653698469">DATE</td></tr></td><td headers="Column_332445182293317884858197428348653698469">TIMER</td><td headers="Null?_332445182293317884858197428348653698469"> - </td><td headers="Type_332445182293317884858197428348653698469">DATE</td></tr></td><td headers="Column_332445182293317884858197428348653698469">INFO</td><td headers="Null?_332445182293317884858197428348653698469"> - </td><td headers="Type_332445182293317884858197428348653698469">VARCHAR2(30)</td></tr></td><td headers="Column_332445182293317884858197428348653698469">VENUE</td><td headers="Null?_332445182293317884858197428348653698469"> - </td><td headers="Type_332445182293317884858197428348653698469">VARCHAR2(30)</td></tr></td><td headers="Column_332445182293317884858197428348653698469">NAME</td><td headers="Null?_332445182293317884858197428348653698469"> - </td><td headers="Type_332445182293317884858197428348653698469">VARCHAR2(30)</td></tr>
+</table><br />7 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">17</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table inventory( 
+    oid1 number(5), 
+    blood_id number(5) primary key, 
+    b_type varchar(5), 
+    amount number(5), 
+    foreign key(oid1) references organization(oid) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">18</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc inventory</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE INVENTORY<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332445182293938063803659733115277966757">Column</th><th id="Null?_332445182293938063803659733115277966757">Null?</th><th id="Type_332445182293938063803659733115277966757">Type</th></tr></td><td headers="Column_332445182293938063803659733115277966757">OID1</td><td headers="Null?_332445182293938063803659733115277966757"> - </td><td headers="Type_332445182293938063803659733115277966757">NUMBER(5,0)</td></tr></td><td headers="Column_332445182293938063803659733115277966757">BLOOD_ID</td><td headers="Null?_332445182293938063803659733115277966757">NOT NULL</td><td headers="Type_332445182293938063803659733115277966757">NUMBER(5,0)</td></tr></td><td headers="Column_332445182293938063803659733115277966757">B_TYPE</td><td headers="Null?_332445182293938063803659733115277966757"> - </td><td headers="Type_332445182293938063803659733115277966757">VARCHAR2(5)</td></tr></td><td headers="Column_332445182293938063803659733115277966757">AMOUNT</td><td headers="Null?_332445182293938063803659733115277966757"> - </td><td headers="Type_332445182293938063803659733115277966757">NUMBER(5,0)</td></tr>
+</table><br />4 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">19</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">alter table inventory add date1 date</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table altered.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">20</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc inventory</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE INVENTORY<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332445189744402974625445399385683830439">Column</th><th id="Null?_332445189744402974625445399385683830439">Null?</th><th id="Type_332445189744402974625445399385683830439">Type</th></tr></td><td headers="Column_332445189744402974625445399385683830439">OID1</td><td headers="Null?_332445189744402974625445399385683830439"> - </td><td headers="Type_332445189744402974625445399385683830439">NUMBER(5,0)</td></tr></td><td headers="Column_332445189744402974625445399385683830439">BLOOD_ID</td><td headers="Null?_332445189744402974625445399385683830439">NOT NULL</td><td headers="Type_332445189744402974625445399385683830439">NUMBER(5,0)</td></tr></td><td headers="Column_332445189744402974625445399385683830439">B_TYPE</td><td headers="Null?_332445189744402974625445399385683830439"> - </td><td headers="Type_332445189744402974625445399385683830439">VARCHAR2(5)</td></tr></td><td headers="Column_332445189744402974625445399385683830439">AMOUNT</td><td headers="Null?_332445189744402974625445399385683830439"> - </td><td headers="Type_332445189744402974625445399385683830439">NUMBER(5,0)</td></tr></td><td headers="Column_332445189744402974625445399385683830439">DATE1</td><td headers="Null?_332445189744402974625445399385683830439"> - </td><td headers="Type_332445189744402974625445399385683830439">DATE</td></tr>
+</table><br />5 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">21</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table blood( 
+    blood_id number(10) primary key, 
+    b_type varchar(5), 
+    date1 date, 
+    amount number(10) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">22</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc blood</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE BLOOD<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332445189745455949014329741396852909735">Column</th><th id="Null?_332445189745455949014329741396852909735">Null?</th><th id="Type_332445189745455949014329741396852909735">Type</th></tr></td><td headers="Column_332445189745455949014329741396852909735">BLOOD_ID</td><td headers="Null?_332445189745455949014329741396852909735">NOT NULL</td><td headers="Type_332445189745455949014329741396852909735">NUMBER(10,0)</td></tr></td><td headers="Column_332445189745455949014329741396852909735">B_TYPE</td><td headers="Null?_332445189745455949014329741396852909735"> - </td><td headers="Type_332445189745455949014329741396852909735">VARCHAR2(5)</td></tr></td><td headers="Column_332445189745455949014329741396852909735">DATE1</td><td headers="Null?_332445189745455949014329741396852909735"> - </td><td headers="Type_332445189745455949014329741396852909735">DATE</td></tr></td><td headers="Column_332445189745455949014329741396852909735">AMOUNT</td><td headers="Null?_332445189745455949014329741396852909735"> - </td><td headers="Type_332445189745455949014329741396852909735">NUMBER(10,0)</td></tr>
+</table><br />4 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">23</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table blood( 
+    blood_id number(10) primary key, 
+    b_type varchar(5), 
+    date1 date, 
+    amount number(10) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00955: name is already used by an existing object 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">24</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc blood</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE BLOOD<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332445916497434844735165604587701825094">Column</th><th id="Null?_332445916497434844735165604587701825094">Null?</th><th id="Type_332445916497434844735165604587701825094">Type</th></tr></td><td headers="Column_332445916497434844735165604587701825094">BLOOD_ID</td><td headers="Null?_332445916497434844735165604587701825094">NOT NULL</td><td headers="Type_332445916497434844735165604587701825094">NUMBER(10,0)</td></tr></td><td headers="Column_332445916497434844735165604587701825094">B_TYPE</td><td headers="Null?_332445916497434844735165604587701825094"> - </td><td headers="Type_332445916497434844735165604587701825094">VARCHAR2(5)</td></tr></td><td headers="Column_332445916497434844735165604587701825094">DATE1</td><td headers="Null?_332445916497434844735165604587701825094"> - </td><td headers="Type_332445916497434844735165604587701825094">DATE</td></tr></td><td headers="Column_332445916497434844735165604587701825094">AMOUNT</td><td headers="Null?_332445916497434844735165604587701825094"> - </td><td headers="Type_332445916497434844735165604587701825094">NUMBER(10,0)</td></tr>
+</table><br />4 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">25</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">create table recipient1( 
+    id number(5) primary key, 
+    blood_group varchar(5), 
+    email varchar(30), 
+    name varchar(20), 
+    phone_no number(10), 
+    bid1 number(5), 
+    foreign key(bid1) references blood(blood_id) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Table created.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">26</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">desc recipient1</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">TABLE RECIPIENT1<table summary="SQL Query Results" class="u-Report">
+<tr><th id="Column_332446028195821659523743550676286860595">Column</th><th id="Null?_332446028195821659523743550676286860595">Null?</th><th id="Type_332446028195821659523743550676286860595">Type</th></tr></td><td headers="Column_332446028195821659523743550676286860595">ID</td><td headers="Null?_332446028195821659523743550676286860595">NOT NULL</td><td headers="Type_332446028195821659523743550676286860595">NUMBER(5,0)</td></tr></td><td headers="Column_332446028195821659523743550676286860595">BLOOD_GROUP</td><td headers="Null?_332446028195821659523743550676286860595"> - </td><td headers="Type_332446028195821659523743550676286860595">VARCHAR2(5)</td></tr></td><td headers="Column_332446028195821659523743550676286860595">EMAIL</td><td headers="Null?_332446028195821659523743550676286860595"> - </td><td headers="Type_332446028195821659523743550676286860595">VARCHAR2(30)</td></tr></td><td headers="Column_332446028195821659523743550676286860595">NAME</td><td headers="Null?_332446028195821659523743550676286860595"> - </td><td headers="Type_332446028195821659523743550676286860595">VARCHAR2(20)</td></tr></td><td headers="Column_332446028195821659523743550676286860595">PHONE_NO</td><td headers="Null?_332446028195821659523743550676286860595"> - </td><td headers="Type_332446028195821659523743550676286860595">NUMBER(10,0)</td></tr></td><td headers="Column_332446028195821659523743550676286860595">BID1</td><td headers="Null?_332446028195821659523743550676286860595"> - </td><td headers="Type_332446028195821659523743550676286860595">NUMBER(5,0)</td></tr>
+</table><br />6 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">27</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(1,&#x27;Sham&#x27;,7866342390,&#x27;sham@gmail.com&#x27;,to_date(&#x27;01-02-2001&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;1234&#x27;,&#x27;A-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">28</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(2,&#x27;Ram&#x27;,7866344389,&#x27;ram@gmail.com&#x27;,to_date(&#x27;21-02-1987&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;abcd&#x27;,&#x27;B+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">29</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(3,&#x27;Himanshu&#x27;,9986342390,&#x27;himanshu@gmail.com&#x27;,to_date(&#x27;11-08-2002&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;himan&#x27;,&#x27;AB+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">30</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(4,&#x27;Shreya&#x27;,7865642390,&#x27;shreya@gmail.com&#x27;,to_date(&#x27;23-09-2001&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;shr&#x27;,&#x27;O-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">31</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(5,&#x27;Kajal&#x27;,7862382390,&#x27;kajal@gmail.com&#x27;,to_date(&#x27;03-04-2001&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;kajal&#x27;,&#x27;B+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">32</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(6,&#x27;Gaurav&#x27;,9466042390,&#x27;gaurav@gmail.com&#x27;,to_date(&#x27;22-07-1999&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;garv&#x27;,&#x27;O+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">33</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(7,&#x27;Chirag&#x27;,8866442395,&#x27;chirag@gmail.com&#x27;,to_date(&#x27;21-12-2001&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;chir&#x27;,&#x27;AB-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">34</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(8,&#x27;Juli&#x27;,9066341390,&#x27;juli@gmail.com&#x27;,to_date(&#x27;10-02-2001&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;juli&#x27;,&#x27;A-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">35</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(9,&#x27;Taran&#x27;,9186342397,&#x27;taran@gmail.com&#x27;,to_date(&#x27;01-02-2001&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;taran&#x27;,&#x27;C+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">36</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donor values(10,&#x27;Mukul&#x27;,7866342356,&#x27;mukul@gmail.com&#x27;,to_date(&#x27;01-07-2002&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;2345&#x27;,&#x27;B-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">37</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(1,&#x27;Garv&#x27;,9986342380,&#x27;garv@gmail&#x27;,&#x27;B+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">38</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(2,&#x27;Sid&#x27;,9906342380,&#x27;sid@gmail&#x27;,&#x27;AB+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">39</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(3,&#x27;Mukul&#x27;,7866342356,&#x27;mukul@gmail&#x27;,&#x27;B+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">40</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(4,&#x27;Amar&#x27;,8986342380,&#x27;amar@gmail&#x27;,&#x27;O+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">41</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(5,&#x27;Mahir&#x27;,9986342230,&#x27;mahir@gmail&#x27;,&#x27;AB-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">42</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(6,&#x27;Saum&#x27;,9980042380,&#x27;saum@gmail&#x27;,&#x27;A+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">43</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(7,&#x27;Yogesh&#x27;,9986341380,&#x27;yogesh@gmail&#x27;,&#x27;A-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">44</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(8,&#x27;David&#x27;,9985342380,&#x27;david@gmail&#x27;,&#x27;O-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">45</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(9,&#x27;Hardik&#x27;,9986342350,&#x27;hardik@gmail&#x27;,&#x27;B-&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">46</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient values(10,&#x27;Jack&#x27;,9986340380,&#x27;jack@gmail&#x27;,&#x27;B+&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">47</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from recipient</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="ID_332448280386125808971270304800425641493">ID</th><th id="NAME_332448280386125808971270304800425641493">NAME</th><th id="PHONE_NO_332448280386125808971270304800425641493">PHONE_NO</th><th id="EMAIL_332448280386125808971270304800425641493">EMAIL</th><th id="BLOOD_GROUP_332448280386125808971270304800425641493">BLOOD_GROUP</th></tr></td><td headers="ID_332448280386125808971270304800425641493">1</td><td headers="NAME_332448280386125808971270304800425641493">Garv</td><td headers="PHONE_NO_332448280386125808971270304800425641493">9986342380</td><td headers="EMAIL_332448280386125808971270304800425641493">garv@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">B+</td></tr></td><td headers="ID_332448280386125808971270304800425641493">2</td><td headers="NAME_332448280386125808971270304800425641493">Sid</td><td headers="PHONE_NO_332448280386125808971270304800425641493">9906342380</td><td headers="EMAIL_332448280386125808971270304800425641493">sid@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">AB+</td></tr></td><td headers="ID_332448280386125808971270304800425641493">3</td><td headers="NAME_332448280386125808971270304800425641493">Mukul</td><td headers="PHONE_NO_332448280386125808971270304800425641493">7866342356</td><td headers="EMAIL_332448280386125808971270304800425641493">mukul@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">B+</td></tr></td><td headers="ID_332448280386125808971270304800425641493">4</td><td headers="NAME_332448280386125808971270304800425641493">Amar</td><td headers="PHONE_NO_332448280386125808971270304800425641493">8986342380</td><td headers="EMAIL_332448280386125808971270304800425641493">amar@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">O+</td></tr></td><td headers="ID_332448280386125808971270304800425641493">5</td><td headers="NAME_332448280386125808971270304800425641493">Mahir</td><td headers="PHONE_NO_332448280386125808971270304800425641493">9986342230</td><td headers="EMAIL_332448280386125808971270304800425641493">mahir@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">AB-</td></tr></td><td headers="ID_332448280386125808971270304800425641493">6</td><td headers="NAME_332448280386125808971270304800425641493">Saum</td><td headers="PHONE_NO_332448280386125808971270304800425641493">9980042380</td><td headers="EMAIL_332448280386125808971270304800425641493">saum@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">A+</td></tr></td><td headers="ID_332448280386125808971270304800425641493">7</td><td headers="NAME_332448280386125808971270304800425641493">Yogesh</td><td headers="PHONE_NO_332448280386125808971270304800425641493">9986341380</td><td headers="EMAIL_332448280386125808971270304800425641493">yogesh@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">A-</td></tr></td><td headers="ID_332448280386125808971270304800425641493">8</td><td headers="NAME_332448280386125808971270304800425641493">David</td><td headers="PHONE_NO_332448280386125808971270304800425641493">9985342380</td><td headers="EMAIL_332448280386125808971270304800425641493">david@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">O-</td></tr></td><td headers="ID_332448280386125808971270304800425641493">9</td><td headers="NAME_332448280386125808971270304800425641493">Hardik</td><td headers="PHONE_NO_332448280386125808971270304800425641493">9986342350</td><td headers="EMAIL_332448280386125808971270304800425641493">hardik@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">B-</td></tr></td><td headers="ID_332448280386125808971270304800425641493">10</td><td headers="NAME_332448280386125808971270304800425641493">Jack</td><td headers="PHONE_NO_332448280386125808971270304800425641493">9986340380</td><td headers="EMAIL_332448280386125808971270304800425641493">jack@gmail</td><td headers="BLOOD_GROUP_332448280386125808971270304800425641493">B+</td></tr>
+</table><br />10 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">48</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(4,8)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">49</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(8,7)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">50</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(6,4)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">51</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(1,7)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">52</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(5,1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">53</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(7,5)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">54</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(10,9)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">55</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(3,2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">56</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(2,3)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">57</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(2,10)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">58</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into request values(5,10)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">59</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organization values(111,9264728854,&#x27;org1@gmail.com&#x27;,&#x27;Punjab&#x27;,&#x27;West side&#x27;,&#x27;Patiala&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">60</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organization values(222,8264728854,&#x27;org2@gmail.com&#x27;,&#x27;Punjab&#x27;,&#x27;TIET&#x27;,&#x27;Patiala&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">61</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organization values(333,9264728864,&#x27;org3@gmail.com&#x27;,&#x27;Kerela&#x27;,&#x27;Bt palace&#x27;,&#x27;Thampi&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">62</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organization values(444,9264728852,&#x27;org4@gmail.com&#x27;,&#x27;Punjab&#x27;,&#x27;Prem Nagar&#x27;,&#x27;Jalandhar&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">63</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organization values(555,7764728854,&#x27;org5@gmail.com&#x27;,&#x27;Haryana&#x27;,&#x27;GT Road&#x27;,&#x27;Ambala&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">64</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donation values(5,5,&#x27;Garv&#x27;,9845678978,&#x27;5@gmail.com&#x27;,to_date(&#x27;09-03-2013&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;hhuyy&#x27;,&#x27;B+&#x27;,111)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">65</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donation values(7,2,&#x27;Pawan&#x27;,8845678978,&#x27;7@gmail.com&#x27;,to_date(&#x27;09-04-2003&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;hhuiy&#x27;,&#x27;B-&#x27;,333)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">66</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donation values(9,7,&#x27;Yogesh&#x27;,9845678975,&#x27;9@gmail.com&#x27;,to_date(&#x27;29-03-2023&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;hhuyo&#x27;,&#x27;AB+&#x27;,222)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">67</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donation values(10,5,&#x27;David&#x27;,9841678978,&#x27;10@gmail.com&#x27;,to_date(&#x27;09-03-2013&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;dhuyy&#x27;,&#x27;O+&#x27;,111)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">68</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donation values(6,6,&#x27;Parv&#x27;,9845678968,&#x27;6@gmail.com&#x27;,to_date(&#x27;12-02-2002&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;hhuyI&#x27;,&#x27;O-&#x27;,444)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">69</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into donation values(11,3,&#x27;Man&#x27;,9845078978,&#x27;11@gmail.com&#x27;,to_date(&#x27;09-03-2013&#x27;,&#x27;dd-mm-yyyy&#x27;),&#x27;hhuyg&#x27;,&#x27;B+&#x27;,555)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">70</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organizes values(111,21,to_date(&#x27;12-10-2022&#x27;,&#x27;dd-mm-yyyy&#x27;),to_date(&#x27;10:00&#x27;,&#x27;hh24:mi&#x27;),&#x27;weekly camp&#x27;,&#x27;that chowk&#x27;,&#x27;camp1&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">71</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organizes values(222,23,to_date(&#x27;12-12-2022&#x27;,&#x27;dd-mm-yyyy&#x27;),to_date(&#x27;10:00&#x27;,&#x27;hh24:mi&#x27;),&#x27;monthly camp&#x27;,&#x27;rc colony&#x27;,&#x27;camp2&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">72</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organizes values(333,31,to_date(&#x27;25-08-2023&#x27;,&#x27;dd-mm-yyyy&#x27;),to_date(&#x27;12:00&#x27;,&#x27;hh24:mi&#x27;),&#x27;awareness camp&#x27;,&#x27;abc school&#x27;,&#x27;camp3&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">73</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organizes values(444,41,to_date(&#x27;13-05-2022&#x27;,&#x27;dd-mm-yyyy&#x27;),to_date(&#x27;16:00&#x27;,&#x27;hh24:mi&#x27;),&#x27;yearly camp&#x27;,&#x27;op road&#x27;,&#x27;camp4&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">74</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organizes values(555,51,to_date(&#x27;22-04-2023&#x27;,&#x27;dd-mm-yyyy&#x27;),to_date(&#x27;09:00&#x27;,&#x27;hh24:mi&#x27;),&#x27;weekly camp&#x27;,&#x27;hjk chowk&#x27;,&#x27;camp5&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">75</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into organizes values(222,61,to_date(&#x27;12-05-2022&#x27;,&#x27;dd-mm-yyyy&#x27;),to_date(&#x27;10:00&#x27;,&#x27;hh24:mi&#x27;),&#x27;monthly camp&#x27;,&#x27;lk lawns&#x27;,&#x27;camp6&#x27;)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">76</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(111,100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">77</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(111,101,&#x27;AB+&#x27;,to_date(&#x27;04-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">78</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(222,102,&#x27;O+&#x27;,to_date(&#x27;21-09-2022&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">79</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(222,103,&#x27;A+&#x27;,to_date(&#x27;14-09-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">80</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(333,104,&#x27;B-&#x27;,to_date(&#x27;18-06-2022&#x27;,&#x27;dd-mm-yyyy&#x27;),1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">81</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(444,105,&#x27;AB-&#x27;,to_date(&#x27;30-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">82</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(555,106,&#x27;B+&#x27;,to_date(&#x27;01-07-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">83</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(333,107,&#x27;O-&#x27;,to_date(&#x27;19-10-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">84</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(555,108,&#x27;A-&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00932: inconsistent datatypes: expected NUMBER got DATE 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">85</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(111,100,&#x27;B+&#x27;,2,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">86</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(111,101,&#x27;AB+&#x27;,1,to_date(&#x27;04-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">87</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(222,102,&#x27;O+&#x27;,2,to_date(&#x27;21-09-2022&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">88</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(222,103,&#x27;A+&#x27;,1,to_date(&#x27;14-09-2021&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">89</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(333,104,&#x27;B-&#x27;,1,to_date(&#x27;18-06-2022&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">90</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(444,105,&#x27;AB-&#x27;,2,to_date(&#x27;30-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">91</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(555,106,&#x27;B+&#x27;,2,to_date(&#x27;01-07-2021&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">92</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(333,107,&#x27;O-&#x27;,1,to_date(&#x27;19-10-2021&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">93</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into inventory values(555,108,&#x27;A-&#x27;,2,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;))</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">94</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">95</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374312) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">96</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374312) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">97</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374312) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">98</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374312) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">99</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374312) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">100</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374312) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">101</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(100,&#x27;B+&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374312) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">102</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(101,&#x27;AB+&#x27;,to_date(&#x27;04-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">103</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(102,&#x27;O+&#x27;,to_date(&#x27;21-09-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">104</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(103,&#x27;A+&#x27;,to_date(&#x27;14-09-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">105</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(104,&#x27;B-&#x27;,to_date(&#x27;18-06-2022&#x27;,&#x27;dd-mm-yyyy&#x27;),1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">106</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(105,&#x27;AB-&#x27;,to_date(&#x27;30-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">107</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(106,&#x27;B+&#x27;,to_date(&#x27;01-07-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">108</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(107,&#x27;O-&#x27;,to_date(&#x27;19-10-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),1)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">109</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into blood values(108,&#x27;A-&#x27;,to_date(&#x27;01-05-2021&#x27;,&#x27;dd-mm-yyyy&#x27;),2)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">110</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(1,&#x27;A+&#x27;,&#x27;1@gmail.com&#x27;,&#x27;Ram&#x27;,&#x27;7687999543&#x27;,103)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">111</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(1,&#x27;A+&#x27;,&#x27;1@gmail.com&#x27;,&#x27;Ram&#x27;,&#x27;7687999543&#x27;,103)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374958) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">112</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(1,&#x27;A+&#x27;,&#x27;1@gmail.com&#x27;,&#x27;Ram&#x27;,&#x27;7687999543&#x27;,103)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374958) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">113</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(1,&#x27;A+&#x27;,&#x27;1@gmail.com&#x27;,&#x27;Ram&#x27;,&#x27;7687999543&#x27;,103)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00001: unique constraint (SQL_CNCJCNFHQLEIWVCSPRIHJJBMT.SYS_C00121374958) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">114</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(2,&#x27;O+&#x27;,&#x27;2@gmail.com&#x27;,&#x27;Sagar&#x27;,&#x27;7684999543&#x27;,102)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">115</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(3,&#x27;AB+&#x27;,&#x27;3@gmail.com&#x27;,&#x27;Agam&#x27;,&#x27;8687999043&#x27;,101)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">116</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(4,&#x27;A-&#x27;,&#x27;4@gmail.com&#x27;,&#x27;Shaun&#x27;,&#x27;7607999543&#x27;,108)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">117</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(5,&#x27;B+&#x27;,&#x27;5@gmail.com&#x27;,&#x27;Rom&#x27;,&#x27;7687099543&#x27;,106)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">118</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(6,&#x27;B-&#x27;,&#x27;6@gmail.com&#x27;,&#x27;Farhan&#x27;,&#x27;7987999543&#x27;,104)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">119</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(7,&#x27;B+&#x27;,&#x27;7@gmail.com&#x27;,&#x27;Sham&#x27;,&#x27;9687999543&#x27;,100)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">120</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">insert into recipient1 values(8,&#x27;O-&#x27;,&#x27;8@gmail.com&#x27;,&#x27;Rohit&#x27;,&#x27;7687099543&#x27;,107)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) inserted.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">121</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from donor</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="ID_332451696636061202732415332883617595200">ID</th><th id="NAME_332451696636061202732415332883617595200">NAME</th><th id="PHONE_NO_332451696636061202732415332883617595200">PHONE_NO</th><th id="EMAIL_332451696636061202732415332883617595200">EMAIL</th><th id="DOB_332451696636061202732415332883617595200">DOB</th><th id="PWD_332451696636061202732415332883617595200">PWD</th><th id="BLOOD_GROUP_332451696636061202732415332883617595200">BLOOD_GROUP</th></tr></td><td headers="ID_332451696636061202732415332883617595200">1</td><td headers="NAME_332451696636061202732415332883617595200">Sham</td><td headers="PHONE_NO_332451696636061202732415332883617595200">7866342390</td><td headers="EMAIL_332451696636061202732415332883617595200">sham@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">01-FEB-01</td><td headers="PWD_332451696636061202732415332883617595200">1234</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">A-</td></tr></td><td headers="ID_332451696636061202732415332883617595200">2</td><td headers="NAME_332451696636061202732415332883617595200">Ram</td><td headers="PHONE_NO_332451696636061202732415332883617595200">7866344389</td><td headers="EMAIL_332451696636061202732415332883617595200">ram@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">21-FEB-87</td><td headers="PWD_332451696636061202732415332883617595200">abcd</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">B+</td></tr></td><td headers="ID_332451696636061202732415332883617595200">3</td><td headers="NAME_332451696636061202732415332883617595200">Himanshu</td><td headers="PHONE_NO_332451696636061202732415332883617595200">9986342390</td><td headers="EMAIL_332451696636061202732415332883617595200">himanshu@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">11-AUG-02</td><td headers="PWD_332451696636061202732415332883617595200">himan</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">AB+</td></tr></td><td headers="ID_332451696636061202732415332883617595200">4</td><td headers="NAME_332451696636061202732415332883617595200">Shreya</td><td headers="PHONE_NO_332451696636061202732415332883617595200">7865642390</td><td headers="EMAIL_332451696636061202732415332883617595200">shreya@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">23-SEP-01</td><td headers="PWD_332451696636061202732415332883617595200">shr</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">O-</td></tr></td><td headers="ID_332451696636061202732415332883617595200">5</td><td headers="NAME_332451696636061202732415332883617595200">Kajal</td><td headers="PHONE_NO_332451696636061202732415332883617595200">7862382390</td><td headers="EMAIL_332451696636061202732415332883617595200">kajal@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">03-APR-01</td><td headers="PWD_332451696636061202732415332883617595200">kajal</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">B+</td></tr></td><td headers="ID_332451696636061202732415332883617595200">6</td><td headers="NAME_332451696636061202732415332883617595200">Gaurav</td><td headers="PHONE_NO_332451696636061202732415332883617595200">9466042390</td><td headers="EMAIL_332451696636061202732415332883617595200">gaurav@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">22-JUL-99</td><td headers="PWD_332451696636061202732415332883617595200">garv</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">O+</td></tr></td><td headers="ID_332451696636061202732415332883617595200">7</td><td headers="NAME_332451696636061202732415332883617595200">Chirag</td><td headers="PHONE_NO_332451696636061202732415332883617595200">8866442395</td><td headers="EMAIL_332451696636061202732415332883617595200">chirag@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">21-DEC-01</td><td headers="PWD_332451696636061202732415332883617595200">chir</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">AB-</td></tr></td><td headers="ID_332451696636061202732415332883617595200">8</td><td headers="NAME_332451696636061202732415332883617595200">Juli</td><td headers="PHONE_NO_332451696636061202732415332883617595200">9066341390</td><td headers="EMAIL_332451696636061202732415332883617595200">juli@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">10-FEB-01</td><td headers="PWD_332451696636061202732415332883617595200">juli</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">A-</td></tr></td><td headers="ID_332451696636061202732415332883617595200">9</td><td headers="NAME_332451696636061202732415332883617595200">Taran</td><td headers="PHONE_NO_332451696636061202732415332883617595200">9186342397</td><td headers="EMAIL_332451696636061202732415332883617595200">taran@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">01-FEB-01</td><td headers="PWD_332451696636061202732415332883617595200">taran</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">C+</td></tr></td><td headers="ID_332451696636061202732415332883617595200">10</td><td headers="NAME_332451696636061202732415332883617595200">Mukul</td><td headers="PHONE_NO_332451696636061202732415332883617595200">7866342356</td><td headers="EMAIL_332451696636061202732415332883617595200">mukul@gmail.com</td><td headers="DOB_332451696636061202732415332883617595200">01-JUL-02</td><td headers="PWD_332451696636061202732415332883617595200">2345</td><td headers="BLOOD_GROUP_332451696636061202732415332883617595200">B-</td></tr>
+</table><br />10 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">122</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from recipient</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="ID_332451696636124066875035293600702316352">ID</th><th id="NAME_332451696636124066875035293600702316352">NAME</th><th id="PHONE_NO_332451696636124066875035293600702316352">PHONE_NO</th><th id="EMAIL_332451696636124066875035293600702316352">EMAIL</th><th id="BLOOD_GROUP_332451696636124066875035293600702316352">BLOOD_GROUP</th></tr></td><td headers="ID_332451696636124066875035293600702316352">1</td><td headers="NAME_332451696636124066875035293600702316352">Garv</td><td headers="PHONE_NO_332451696636124066875035293600702316352">9986342380</td><td headers="EMAIL_332451696636124066875035293600702316352">garv@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">B+</td></tr></td><td headers="ID_332451696636124066875035293600702316352">2</td><td headers="NAME_332451696636124066875035293600702316352">Sid</td><td headers="PHONE_NO_332451696636124066875035293600702316352">9906342380</td><td headers="EMAIL_332451696636124066875035293600702316352">sid@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">AB+</td></tr></td><td headers="ID_332451696636124066875035293600702316352">3</td><td headers="NAME_332451696636124066875035293600702316352">Mukul</td><td headers="PHONE_NO_332451696636124066875035293600702316352">7866342356</td><td headers="EMAIL_332451696636124066875035293600702316352">mukul@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">B+</td></tr></td><td headers="ID_332451696636124066875035293600702316352">4</td><td headers="NAME_332451696636124066875035293600702316352">Amar</td><td headers="PHONE_NO_332451696636124066875035293600702316352">8986342380</td><td headers="EMAIL_332451696636124066875035293600702316352">amar@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">O+</td></tr></td><td headers="ID_332451696636124066875035293600702316352">5</td><td headers="NAME_332451696636124066875035293600702316352">Mahir</td><td headers="PHONE_NO_332451696636124066875035293600702316352">9986342230</td><td headers="EMAIL_332451696636124066875035293600702316352">mahir@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">AB-</td></tr></td><td headers="ID_332451696636124066875035293600702316352">6</td><td headers="NAME_332451696636124066875035293600702316352">Saum</td><td headers="PHONE_NO_332451696636124066875035293600702316352">9980042380</td><td headers="EMAIL_332451696636124066875035293600702316352">saum@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">A+</td></tr></td><td headers="ID_332451696636124066875035293600702316352">7</td><td headers="NAME_332451696636124066875035293600702316352">Yogesh</td><td headers="PHONE_NO_332451696636124066875035293600702316352">9986341380</td><td headers="EMAIL_332451696636124066875035293600702316352">yogesh@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">A-</td></tr></td><td headers="ID_332451696636124066875035293600702316352">8</td><td headers="NAME_332451696636124066875035293600702316352">David</td><td headers="PHONE_NO_332451696636124066875035293600702316352">9985342380</td><td headers="EMAIL_332451696636124066875035293600702316352">david@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">O-</td></tr></td><td headers="ID_332451696636124066875035293600702316352">9</td><td headers="NAME_332451696636124066875035293600702316352">Hardik</td><td headers="PHONE_NO_332451696636124066875035293600702316352">9986342350</td><td headers="EMAIL_332451696636124066875035293600702316352">hardik@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">B-</td></tr></td><td headers="ID_332451696636124066875035293600702316352">10</td><td headers="NAME_332451696636124066875035293600702316352">Jack</td><td headers="PHONE_NO_332451696636124066875035293600702316352">9986340380</td><td headers="EMAIL_332451696636124066875035293600702316352">jack@gmail</td><td headers="BLOOD_GROUP_332451696636124066875035293600702316352">B+</td></tr>
+</table><br />10 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">123</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from request</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="ID1_332451793358678713058469475791021297368">ID1</th><th id="ID2_332451793358678713058469475791021297368">ID2</th></tr></td><td headers="ID1_332451793358678713058469475791021297368">4</td><td headers="ID2_332451793358678713058469475791021297368">8</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">8</td><td headers="ID2_332451793358678713058469475791021297368">7</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">6</td><td headers="ID2_332451793358678713058469475791021297368">4</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">1</td><td headers="ID2_332451793358678713058469475791021297368">7</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">5</td><td headers="ID2_332451793358678713058469475791021297368">1</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">7</td><td headers="ID2_332451793358678713058469475791021297368">5</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">10</td><td headers="ID2_332451793358678713058469475791021297368">9</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">3</td><td headers="ID2_332451793358678713058469475791021297368">2</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">2</td><td headers="ID2_332451793358678713058469475791021297368">3</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">2</td><td headers="ID2_332451793358678713058469475791021297368">10</td></tr></td><td headers="ID1_332451793358678713058469475791021297368">5</td><td headers="ID2_332451793358678713058469475791021297368">10</td></tr>
+</table><br />11 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">124</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from organization</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="OID_332451665583825702337197618078368702040">OID</th><th id="CONTACT_ID_332451665583825702337197618078368702040">CONTACT_ID</th><th id="EMAIL_332451665583825702337197618078368702040">EMAIL</th><th id="STATE_332451665583825702337197618078368702040">STATE</th><th id="ADDRESS_332451665583825702337197618078368702040">ADDRESS</th><th id="CITY_332451665583825702337197618078368702040">CITY</th></tr></td><td headers="OID_332451665583825702337197618078368702040">111</td><td headers="CONTACT_ID_332451665583825702337197618078368702040">9264728854</td><td headers="EMAIL_332451665583825702337197618078368702040">org1@gmail.com</td><td headers="STATE_332451665583825702337197618078368702040">Punjab</td><td headers="ADDRESS_332451665583825702337197618078368702040">West side</td><td headers="CITY_332451665583825702337197618078368702040">Patiala</td></tr></td><td headers="OID_332451665583825702337197618078368702040">222</td><td headers="CONTACT_ID_332451665583825702337197618078368702040">8264728854</td><td headers="EMAIL_332451665583825702337197618078368702040">org2@gmail.com</td><td headers="STATE_332451665583825702337197618078368702040">Punjab</td><td headers="ADDRESS_332451665583825702337197618078368702040">TIET</td><td headers="CITY_332451665583825702337197618078368702040">Patiala</td></tr></td><td headers="OID_332451665583825702337197618078368702040">333</td><td headers="CONTACT_ID_332451665583825702337197618078368702040">9264728864</td><td headers="EMAIL_332451665583825702337197618078368702040">org3@gmail.com</td><td headers="STATE_332451665583825702337197618078368702040">Kerela</td><td headers="ADDRESS_332451665583825702337197618078368702040">Bt palace</td><td headers="CITY_332451665583825702337197618078368702040">Thampi</td></tr></td><td headers="OID_332451665583825702337197618078368702040">444</td><td headers="CONTACT_ID_332451665583825702337197618078368702040">9264728852</td><td headers="EMAIL_332451665583825702337197618078368702040">org4@gmail.com</td><td headers="STATE_332451665583825702337197618078368702040">Punjab</td><td headers="ADDRESS_332451665583825702337197618078368702040">Prem Nagar</td><td headers="CITY_332451665583825702337197618078368702040">Jalandhar</td></tr></td><td headers="OID_332451665583825702337197618078368702040">555</td><td headers="CONTACT_ID_332451665583825702337197618078368702040">7764728854</td><td headers="EMAIL_332451665583825702337197618078368702040">org5@gmail.com</td><td headers="STATE_332451665583825702337197618078368702040">Haryana</td><td headers="ADDRESS_332451665583825702337197618078368702040">GT Road</td><td headers="CITY_332451665583825702337197618078368702040">Ambala</td></tr>
+</table><br />5 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">125</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from donation</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="ID_332451793360264823733803869268235800280">ID</th><th id="CERTIFICATE_ID_332451793360264823733803869268235800280">CERTIFICATE_ID</th><th id="NAME_332451793360264823733803869268235800280">NAME</th><th id="PHONE_NO_332451793360264823733803869268235800280">PHONE_NO</th><th id="EMAIL_332451793360264823733803869268235800280">EMAIL</th><th id="DOB_332451793360264823733803869268235800280">DOB</th><th id="PWD_332451793360264823733803869268235800280">PWD</th><th id="BLOOD_GROUP_332451793360264823733803869268235800280">BLOOD_GROUP</th><th id="OID1_332451793360264823733803869268235800280">OID1</th></tr></td><td headers="ID_332451793360264823733803869268235800280">5</td><td headers="CERTIFICATE_ID_332451793360264823733803869268235800280">5</td><td headers="NAME_332451793360264823733803869268235800280">Garv</td><td headers="PHONE_NO_332451793360264823733803869268235800280">9845678978</td><td headers="EMAIL_332451793360264823733803869268235800280">5@gmail.com</td><td headers="DOB_332451793360264823733803869268235800280">09-MAR-13</td><td headers="PWD_332451793360264823733803869268235800280">hhuyy</td><td headers="BLOOD_GROUP_332451793360264823733803869268235800280">B+</td><td headers="OID1_332451793360264823733803869268235800280">111</td></tr></td><td headers="ID_332451793360264823733803869268235800280">7</td><td headers="CERTIFICATE_ID_332451793360264823733803869268235800280">2</td><td headers="NAME_332451793360264823733803869268235800280">Pawan</td><td headers="PHONE_NO_332451793360264823733803869268235800280">8845678978</td><td headers="EMAIL_332451793360264823733803869268235800280">7@gmail.com</td><td headers="DOB_332451793360264823733803869268235800280">09-APR-03</td><td headers="PWD_332451793360264823733803869268235800280">hhuiy</td><td headers="BLOOD_GROUP_332451793360264823733803869268235800280">B-</td><td headers="OID1_332451793360264823733803869268235800280">333</td></tr></td><td headers="ID_332451793360264823733803869268235800280">9</td><td headers="CERTIFICATE_ID_332451793360264823733803869268235800280">7</td><td headers="NAME_332451793360264823733803869268235800280">Yogesh</td><td headers="PHONE_NO_332451793360264823733803869268235800280">9845678975</td><td headers="EMAIL_332451793360264823733803869268235800280">9@gmail.com</td><td headers="DOB_332451793360264823733803869268235800280">29-MAR-23</td><td headers="PWD_332451793360264823733803869268235800280">hhuyo</td><td headers="BLOOD_GROUP_332451793360264823733803869268235800280">AB+</td><td headers="OID1_332451793360264823733803869268235800280">222</td></tr></td><td headers="ID_332451793360264823733803869268235800280">10</td><td headers="CERTIFICATE_ID_332451793360264823733803869268235800280">5</td><td headers="NAME_332451793360264823733803869268235800280">David</td><td headers="PHONE_NO_332451793360264823733803869268235800280">9841678978</td><td headers="EMAIL_332451793360264823733803869268235800280">10@gmail.com</td><td headers="DOB_332451793360264823733803869268235800280">09-MAR-13</td><td headers="PWD_332451793360264823733803869268235800280">dhuyy</td><td headers="BLOOD_GROUP_332451793360264823733803869268235800280">O+</td><td headers="OID1_332451793360264823733803869268235800280">111</td></tr></td><td headers="ID_332451793360264823733803869268235800280">6</td><td headers="CERTIFICATE_ID_332451793360264823733803869268235800280">6</td><td headers="NAME_332451793360264823733803869268235800280">Parv</td><td headers="PHONE_NO_332451793360264823733803869268235800280">9845678968</td><td headers="EMAIL_332451793360264823733803869268235800280">6@gmail.com</td><td headers="DOB_332451793360264823733803869268235800280">12-FEB-02</td><td headers="PWD_332451793360264823733803869268235800280">hhuyI</td><td headers="BLOOD_GROUP_332451793360264823733803869268235800280">O-</td><td headers="OID1_332451793360264823733803869268235800280">444</td></tr></td><td headers="ID_332451793360264823733803869268235800280">11</td><td headers="CERTIFICATE_ID_332451793360264823733803869268235800280">3</td><td headers="NAME_332451793360264823733803869268235800280">Man</td><td headers="PHONE_NO_332451793360264823733803869268235800280">9845078978</td><td headers="EMAIL_332451793360264823733803869268235800280">11@gmail.com</td><td headers="DOB_332451793360264823733803869268235800280">09-MAR-13</td><td headers="PWD_332451793360264823733803869268235800280">hhuyg</td><td headers="BLOOD_GROUP_332451793360264823733803869268235800280">B+</td><td headers="OID1_332451793360264823733803869268235800280">555</td></tr>
+</table><br />6 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">126</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from organizes</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="OID1_332451793360266032659623483897410506456">OID1</th><th id="CID_332451793360266032659623483897410506456">CID</th><th id="DATE1_332451793360266032659623483897410506456">DATE1</th><th id="TIMER_332451793360266032659623483897410506456">TIMER</th><th id="INFO_332451793360266032659623483897410506456">INFO</th><th id="VENUE_332451793360266032659623483897410506456">VENUE</th><th id="NAME_332451793360266032659623483897410506456">NAME</th></tr></td><td headers="OID1_332451793360266032659623483897410506456">111</td><td headers="CID_332451793360266032659623483897410506456">21</td><td headers="DATE1_332451793360266032659623483897410506456">12-OCT-22</td><td headers="TIMER_332451793360266032659623483897410506456">01-APR-23</td><td headers="INFO_332451793360266032659623483897410506456">weekly camp</td><td headers="VENUE_332451793360266032659623483897410506456">that chowk</td><td headers="NAME_332451793360266032659623483897410506456">camp1</td></tr></td><td headers="OID1_332451793360266032659623483897410506456">222</td><td headers="CID_332451793360266032659623483897410506456">23</td><td headers="DATE1_332451793360266032659623483897410506456">12-DEC-22</td><td headers="TIMER_332451793360266032659623483897410506456">01-APR-23</td><td headers="INFO_332451793360266032659623483897410506456">monthly camp</td><td headers="VENUE_332451793360266032659623483897410506456">rc colony</td><td headers="NAME_332451793360266032659623483897410506456">camp2</td></tr></td><td headers="OID1_332451793360266032659623483897410506456">333</td><td headers="CID_332451793360266032659623483897410506456">31</td><td headers="DATE1_332451793360266032659623483897410506456">25-AUG-23</td><td headers="TIMER_332451793360266032659623483897410506456">01-APR-23</td><td headers="INFO_332451793360266032659623483897410506456">awareness camp</td><td headers="VENUE_332451793360266032659623483897410506456">abc school</td><td headers="NAME_332451793360266032659623483897410506456">camp3</td></tr></td><td headers="OID1_332451793360266032659623483897410506456">444</td><td headers="CID_332451793360266032659623483897410506456">41</td><td headers="DATE1_332451793360266032659623483897410506456">13-MAY-22</td><td headers="TIMER_332451793360266032659623483897410506456">01-APR-23</td><td headers="INFO_332451793360266032659623483897410506456">yearly camp</td><td headers="VENUE_332451793360266032659623483897410506456">op road</td><td headers="NAME_332451793360266032659623483897410506456">camp4</td></tr></td><td headers="OID1_332451793360266032659623483897410506456">555</td><td headers="CID_332451793360266032659623483897410506456">51</td><td headers="DATE1_332451793360266032659623483897410506456">22-APR-23</td><td headers="TIMER_332451793360266032659623483897410506456">01-APR-23</td><td headers="INFO_332451793360266032659623483897410506456">weekly camp</td><td headers="VENUE_332451793360266032659623483897410506456">hjk chowk</td><td headers="NAME_332451793360266032659623483897410506456">camp5</td></tr></td><td headers="OID1_332451793360266032659623483897410506456">222</td><td headers="CID_332451793360266032659623483897410506456">61</td><td headers="DATE1_332451793360266032659623483897410506456">12-MAY-22</td><td headers="TIMER_332451793360266032659623483897410506456">01-APR-23</td><td headers="INFO_332451793360266032659623483897410506456">monthly camp</td><td headers="VENUE_332451793360266032659623483897410506456">lk lawns</td><td headers="NAME_332451793360266032659623483897410506456">camp6</td></tr>
+</table><br />6 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">127</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from inventory</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="OID1_332451793360874122346889642372287712984">OID1</th><th id="BLOOD_ID_332451793360874122346889642372287712984">BLOOD_ID</th><th id="B_TYPE_332451793360874122346889642372287712984">B_TYPE</th><th id="AMOUNT_332451793360874122346889642372287712984">AMOUNT</th><th id="DATE1_332451793360874122346889642372287712984">DATE1</th></tr></td><td headers="OID1_332451793360874122346889642372287712984">111</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">100</td><td headers="B_TYPE_332451793360874122346889642372287712984">B+</td><td headers="AMOUNT_332451793360874122346889642372287712984">2</td><td headers="DATE1_332451793360874122346889642372287712984">01-MAY-21</td></tr></td><td headers="OID1_332451793360874122346889642372287712984">111</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">101</td><td headers="B_TYPE_332451793360874122346889642372287712984">AB+</td><td headers="AMOUNT_332451793360874122346889642372287712984">1</td><td headers="DATE1_332451793360874122346889642372287712984">04-MAY-21</td></tr></td><td headers="OID1_332451793360874122346889642372287712984">222</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">102</td><td headers="B_TYPE_332451793360874122346889642372287712984">O+</td><td headers="AMOUNT_332451793360874122346889642372287712984">2</td><td headers="DATE1_332451793360874122346889642372287712984">21-SEP-22</td></tr></td><td headers="OID1_332451793360874122346889642372287712984">222</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">103</td><td headers="B_TYPE_332451793360874122346889642372287712984">A+</td><td headers="AMOUNT_332451793360874122346889642372287712984">1</td><td headers="DATE1_332451793360874122346889642372287712984">14-SEP-21</td></tr></td><td headers="OID1_332451793360874122346889642372287712984">333</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">104</td><td headers="B_TYPE_332451793360874122346889642372287712984">B-</td><td headers="AMOUNT_332451793360874122346889642372287712984">1</td><td headers="DATE1_332451793360874122346889642372287712984">18-JUN-22</td></tr></td><td headers="OID1_332451793360874122346889642372287712984">444</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">105</td><td headers="B_TYPE_332451793360874122346889642372287712984">AB-</td><td headers="AMOUNT_332451793360874122346889642372287712984">2</td><td headers="DATE1_332451793360874122346889642372287712984">30-MAY-21</td></tr></td><td headers="OID1_332451793360874122346889642372287712984">555</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">106</td><td headers="B_TYPE_332451793360874122346889642372287712984">B+</td><td headers="AMOUNT_332451793360874122346889642372287712984">2</td><td headers="DATE1_332451793360874122346889642372287712984">01-JUL-21</td></tr></td><td headers="OID1_332451793360874122346889642372287712984">333</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">107</td><td headers="B_TYPE_332451793360874122346889642372287712984">O-</td><td headers="AMOUNT_332451793360874122346889642372287712984">1</td><td headers="DATE1_332451793360874122346889642372287712984">19-OCT-21</td></tr></td><td headers="OID1_332451793360874122346889642372287712984">555</td><td headers="BLOOD_ID_332451793360874122346889642372287712984">108</td><td headers="B_TYPE_332451793360874122346889642372287712984">A-</td><td headers="AMOUNT_332451793360874122346889642372287712984">2</td><td headers="DATE1_332451793360874122346889642372287712984">01-MAY-21</td></tr>
+</table><br />9 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">128</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from blood</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="BLOOD_ID_332451793360875331272709257001462419160">BLOOD_ID</th><th id="B_TYPE_332451793360875331272709257001462419160">B_TYPE</th><th id="DATE1_332451793360875331272709257001462419160">DATE1</th><th id="AMOUNT_332451793360875331272709257001462419160">AMOUNT</th></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">100</td><td headers="B_TYPE_332451793360875331272709257001462419160">B+</td><td headers="DATE1_332451793360875331272709257001462419160">01-MAY-21</td><td headers="AMOUNT_332451793360875331272709257001462419160">2</td></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">101</td><td headers="B_TYPE_332451793360875331272709257001462419160">AB+</td><td headers="DATE1_332451793360875331272709257001462419160">04-MAY-21</td><td headers="AMOUNT_332451793360875331272709257001462419160">1</td></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">102</td><td headers="B_TYPE_332451793360875331272709257001462419160">O+</td><td headers="DATE1_332451793360875331272709257001462419160">21-SEP-21</td><td headers="AMOUNT_332451793360875331272709257001462419160">2</td></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">103</td><td headers="B_TYPE_332451793360875331272709257001462419160">A+</td><td headers="DATE1_332451793360875331272709257001462419160">14-SEP-21</td><td headers="AMOUNT_332451793360875331272709257001462419160">1</td></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">104</td><td headers="B_TYPE_332451793360875331272709257001462419160">B-</td><td headers="DATE1_332451793360875331272709257001462419160">18-JUN-22</td><td headers="AMOUNT_332451793360875331272709257001462419160">1</td></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">105</td><td headers="B_TYPE_332451793360875331272709257001462419160">AB-</td><td headers="DATE1_332451793360875331272709257001462419160">30-MAY-21</td><td headers="AMOUNT_332451793360875331272709257001462419160">2</td></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">106</td><td headers="B_TYPE_332451793360875331272709257001462419160">B+</td><td headers="DATE1_332451793360875331272709257001462419160">01-JUL-21</td><td headers="AMOUNT_332451793360875331272709257001462419160">2</td></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">107</td><td headers="B_TYPE_332451793360875331272709257001462419160">O-</td><td headers="DATE1_332451793360875331272709257001462419160">19-OCT-21</td><td headers="AMOUNT_332451793360875331272709257001462419160">1</td></tr></td><td headers="BLOOD_ID_332451793360875331272709257001462419160">108</td><td headers="B_TYPE_332451793360875331272709257001462419160">A-</td><td headers="DATE1_332451793360875331272709257001462419160">01-MAY-21</td><td headers="AMOUNT_332451793360875331272709257001462419160">2</td></tr>
+</table><br />9 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">129</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from recipient1</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="ID_332451793361071177255486826927764819672">ID</th><th id="BLOOD_GROUP_332451793361071177255486826927764819672">BLOOD_GROUP</th><th id="EMAIL_332451793361071177255486826927764819672">EMAIL</th><th id="NAME_332451793361071177255486826927764819672">NAME</th><th id="PHONE_NO_332451793361071177255486826927764819672">PHONE_NO</th><th id="BID1_332451793361071177255486826927764819672">BID1</th></tr></td><td headers="ID_332451793361071177255486826927764819672">1</td><td headers="BLOOD_GROUP_332451793361071177255486826927764819672">A+</td><td headers="EMAIL_332451793361071177255486826927764819672">1@gmail.com</td><td headers="NAME_332451793361071177255486826927764819672">Ram</td><td headers="PHONE_NO_332451793361071177255486826927764819672">7687999543</td><td headers="BID1_332451793361071177255486826927764819672">103</td></tr></td><td headers="ID_332451793361071177255486826927764819672">2</td><td headers="BLOOD_GROUP_332451793361071177255486826927764819672">O+</td><td headers="EMAIL_332451793361071177255486826927764819672">2@gmail.com</td><td headers="NAME_332451793361071177255486826927764819672">Sagar</td><td headers="PHONE_NO_332451793361071177255486826927764819672">7684999543</td><td headers="BID1_332451793361071177255486826927764819672">102</td></tr></td><td headers="ID_332451793361071177255486826927764819672">3</td><td headers="BLOOD_GROUP_332451793361071177255486826927764819672">AB+</td><td headers="EMAIL_332451793361071177255486826927764819672">3@gmail.com</td><td headers="NAME_332451793361071177255486826927764819672">Agam</td><td headers="PHONE_NO_332451793361071177255486826927764819672">8687999043</td><td headers="BID1_332451793361071177255486826927764819672">101</td></tr></td><td headers="ID_332451793361071177255486826927764819672">4</td><td headers="BLOOD_GROUP_332451793361071177255486826927764819672">A-</td><td headers="EMAIL_332451793361071177255486826927764819672">4@gmail.com</td><td headers="NAME_332451793361071177255486826927764819672">Shaun</td><td headers="PHONE_NO_332451793361071177255486826927764819672">7607999543</td><td headers="BID1_332451793361071177255486826927764819672">108</td></tr></td><td headers="ID_332451793361071177255486826927764819672">5</td><td headers="BLOOD_GROUP_332451793361071177255486826927764819672">B+</td><td headers="EMAIL_332451793361071177255486826927764819672">5@gmail.com</td><td headers="NAME_332451793361071177255486826927764819672">Rom</td><td headers="PHONE_NO_332451793361071177255486826927764819672">7687099543</td><td headers="BID1_332451793361071177255486826927764819672">106</td></tr></td><td headers="ID_332451793361071177255486826927764819672">6</td><td headers="BLOOD_GROUP_332451793361071177255486826927764819672">B-</td><td headers="EMAIL_332451793361071177255486826927764819672">6@gmail.com</td><td headers="NAME_332451793361071177255486826927764819672">Farhan</td><td headers="PHONE_NO_332451793361071177255486826927764819672">7987999543</td><td headers="BID1_332451793361071177255486826927764819672">104</td></tr></td><td headers="ID_332451793361071177255486826927764819672">7</td><td headers="BLOOD_GROUP_332451793361071177255486826927764819672">B+</td><td headers="EMAIL_332451793361071177255486826927764819672">7@gmail.com</td><td headers="NAME_332451793361071177255486826927764819672">Sham</td><td headers="PHONE_NO_332451793361071177255486826927764819672">9687999543</td><td headers="BID1_332451793361071177255486826927764819672">100</td></tr></td><td headers="ID_332451793361071177255486826927764819672">8</td><td headers="BLOOD_GROUP_332451793361071177255486826927764819672">O-</td><td headers="EMAIL_332451793361071177255486826927764819672">8@gmail.com</td><td headers="NAME_332451793361071177255486826927764819672">Rohit</td><td headers="PHONE_NO_332451793361071177255486826927764819672">7687099543</td><td headers="BID1_332451793361071177255486826927764819672">107</td></tr>
+</table><br />8 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">130</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select name from donor where id in ( 
+    select id1 from request where id2 in( 
+    select id from recipient where id=10 
+    ) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="NAME_332453114831652537426543017304317267231">NAME</th></tr></td><td headers="NAME_332453114831652537426543017304317267231">Ram</td></tr></td><td headers="NAME_332453114831652537426543017304317267231">Kajal</td></tr>
+</table><br />2 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">131</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select name, phone_no from donor where id in( 
+    select id1 from request where id2 in ( 
+    select id from recipient where id=5 
+    ) 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="NAME_332454026691719419756948765925267472718">NAME</th><th id="PHONE_NO_332454026691719419756948765925267472718">PHONE_NO</th></tr></td><td headers="NAME_332454026691719419756948765925267472718">Chirag</td><td headers="PHONE_NO_332454026691719419756948765925267472718">8866442395</td></tr>
+</table></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">132</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select name, phone_no from donation where oid1 in( 
+    select oid from organization where city = &#x27;Patiala&#x27; 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="NAME_332454683580895827953068971084906254341">NAME</th><th id="PHONE_NO_332454683580895827953068971084906254341">PHONE_NO</th></tr></td><td headers="NAME_332454683580895827953068971084906254341">Garv</td><td headers="PHONE_NO_332454683580895827953068971084906254341">9845678978</td></tr></td><td headers="NAME_332454683580895827953068971084906254341">Yogesh</td><td headers="PHONE_NO_332454683580895827953068971084906254341">9845678975</td></tr></td><td headers="NAME_332454683580895827953068971084906254341">David</td><td headers="PHONE_NO_332454683580895827953068971084906254341">9841678978</td></tr>
+</table><br />3 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">133</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select count(*) from donation where oid1 in( 
+    select oid from organization where city=&#x27;Jalandhar&#x27; 
+)</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="COUNT(*)_332455379272900635003434262774138573529">COUNT(*)</th></tr></td><td headers="COUNT(*)_332455379272900635003434262774138573529">1</td></tr>
+</table></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">134</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select name,phone_no from donor where id=2</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="NAME_332455603187747111540790983309322676053">NAME</th><th id="PHONE_NO_332455603187747111540790983309322676053">PHONE_NO</th></tr></td><td headers="NAME_332455603187747111540790983309322676053">Ram</td><td headers="PHONE_NO_332455603187747111540790983309322676053">7866344389</td></tr>
+</table></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">135</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">update donor set phone_no = 9855643231 where id=2</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">1 row(s) updated.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">136</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select name,phone_no from donor where id=2</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="NAME_332455603187749529392430212567672088405">NAME</th><th id="PHONE_NO_332455603187749529392430212567672088405">PHONE_NO</th></tr></td><td headers="NAME_332455603187749529392430212567672088405">Ram</td><td headers="PHONE_NO_332455603187749529392430212567672088405">9855643231</td></tr>
+</table></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">137</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select blood_group, count(certificate_id) from donation group by blood_group</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="BLOOD_GROUP_332455338670443930528830758307122653066">BLOOD_GROUP</th><th id="COUNT(CERTIFICATE_ID)_332455338670443930528830758307122653066">COUNT(CERTIFICATE_ID)</th></tr></td><td headers="BLOOD_GROUP_332455338670443930528830758307122653066">O+</td><td headers="COUNT(CERTIFICATE_ID)_332455338670443930528830758307122653066">1</td></tr></td><td headers="BLOOD_GROUP_332455338670443930528830758307122653066">AB+</td><td headers="COUNT(CERTIFICATE_ID)_332455338670443930528830758307122653066">1</td></tr></td><td headers="BLOOD_GROUP_332455338670443930528830758307122653066">B+</td><td headers="COUNT(CERTIFICATE_ID)_332455338670443930528830758307122653066">2</td></tr></td><td headers="BLOOD_GROUP_332455338670443930528830758307122653066">B-</td><td headers="COUNT(CERTIFICATE_ID)_332455338670443930528830758307122653066">1</td></tr></td><td headers="BLOOD_GROUP_332455338670443930528830758307122653066">O-</td><td headers="COUNT(CERTIFICATE_ID)_332455338670443930528830758307122653066">1</td></tr>
+</table><br />5 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">138</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from inventory where date1&gt;&#x27;00-05-2021&#x27; and date1&lt;&#x27;31-05-2021&#x27;</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-01843: not a valid month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">139</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from inventory where date1&gt;&#x27;01-05-2021&#x27; and date1&lt;&#x27;31-05-2021&#x27;</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-01843: not a valid month</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">140</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select * from inventory where date1&gt;&quot;01-05-2021&quot; and date1&lt;&quot;31-05-2021&quot;</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-00904: "31-05-2021": invalid identifier</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">141</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">select oid1, count(amount) from inventory group by oid1</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg"><table summary="SQL Query Results" class="u-Report">
+<tr><th id="OID1_332455716663969400096389817140724639340">OID1</th><th id="COUNT(AMOUNT)_332455716663969400096389817140724639340">COUNT(AMOUNT)</th></tr></td><td headers="OID1_332455716663969400096389817140724639340">333</td><td headers="COUNT(AMOUNT)_332455716663969400096389817140724639340">2</td></tr></td><td headers="OID1_332455716663969400096389817140724639340">222</td><td headers="COUNT(AMOUNT)_332455716663969400096389817140724639340">2</td></tr></td><td headers="OID1_332455716663969400096389817140724639340">444</td><td headers="COUNT(AMOUNT)_332455716663969400096389817140724639340">1</td></tr></td><td headers="OID1_332455716663969400096389817140724639340">111</td><td headers="COUNT(AMOUNT)_332455716663969400096389817140724639340">2</td></tr></td><td headers="OID1_332455716663969400096389817140724639340">555</td><td headers="COUNT(AMOUNT)_332455716663969400096389817140724639340">2</td></tr>
+</table><br />5 rows selected.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">142</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">declare 
+ab blood.b_type%type; 
+begin 
+select b_type into ab from blood where blood_id = 105; 
+dbms_output.put_line(&#x27;A sample found in stock and the requested blood sample is &#x27;||ab); 
+exception 
+when no_data_found then 
+dbms_output.put_line(&#x27;Data not found&#x27;); 
+end;</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Statement processed.<br />A sample found in stock and the requested blood sample is AB-<br /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">143</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">begin 
+insert into donor values(12,&#x27;amitabh&#x27;,&#x27;7865523a9&#x27;,&#x27;m@gmail.com&#x27;,&#x27;09-05-2003&#x27;,&#x27;hgfdt&#x27;,&#x27;B+&#x27;); 
+exception 
+when invalid_number then 
+dbms_output.put_line(&#x27;Coversion of string to number failed&#x27;); 
+end;</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Statement processed.<br />Coversion of string to number failed<br /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">144</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">declare 
+total_rows number(2); 
+begin 
+update donor 
+set phone_no = 9856488347 where id=7; 
+if sl%notfound then 
+dbms_output.put_line(&#x27;No such donor exists&#x27;); 
+elsif sql%found then total_rows:=sql%rowcount; 
+dbms_output.put_line(&#x27;Rows affected&#x27;||total_rows); 
+end if; 
+end;</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg s-Session-msg--error">ORA-06550: line 6, column 4:
+PLS-00201: identifier 'SL' must be declared 
+
+
+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">145</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">declare 
+total_rows number(2); 
+begin 
+update donor 
+set phone_no = 9856488347 where id=7; 
+if sql%notfound then 
+dbms_output.put_line(&#x27;No such donor exists&#x27;); 
+elsif sql%found then total_rows:=sql%rowcount; 
+dbms_output.put_line(&#x27;Rows affected&#x27;||total_rows); 
+end if; 
+end;</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Statement processed.<br />Rows affected1<br /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li><li class="s-Session-item"><div class="media">
+                                <div class="media-graphic">
+                                    <span class="s-Session-counter">Statement</span>
+                                    <span class="s-Session-count">146</span>
+                                </div><div class="media-content"><div class="s-Session-codeWrap"><pre class="s-Session-code"><code class="highlight-sql">declare 
+total_rows number(2); 
+begin 
+update donor 
+set phone_no = 9856488347 where id=7; 
+if sql%notfound then 
+dbms_output.put_line(&#x27;No such donor exists&#x27;); 
+elsif sql%found then total_rows:=sql%rowcount; 
+dbms_output.put_line(&#x27;Rows affected: &#x27;||total_rows); 
+end if; 
+end;</code></pre>
+                        </div>
+                        <div class="s-Session-result"><span class="s-Session-msg">Statement processed.<br />Rows affected: 1<br /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li></ul>
+                <div class="ls-Title">
+                    <h1 class="ls-Title-text">Additional Information</h1>
+                </div><ul class="ls-Details"><li>
+                <span class="ls-Details-label">Database on OTN</span>
+                <span class="ls-Details-value"><a href="https://community.oracle.com/tech/developers/categories/sql_and_pl_sql" target="_blank">SQL and PL/SQL Discussion forums</a><br><a href="http://otn.oracle.com/database" target="_blank">Oracle Database</a><br><a href="https://www.oracle.com/database/technologies/oracle-database-software-downloads.html" target="_blank">Download Oracle Database</a><br></span></li></ul></div>
+                <div class="ls-Footer">
+                    <span class="footer-sql">&copy; 2023 Oracle Corporation</span>
+                    <br>
+                    <a href="http://www.oracle.com/us/legal/privacy/overview/index.html" target="_blank">Privacy</a> |
+                    <a href="http://www.oracle.com/us/legal/terms/index.html" target="_blank">Terms of Use</a>
+                </div>
+                <script>
+                    hljs.initHighlightingOnLoad();
+                </script><!-- Start SiteCatalyst code -->
+<script language="javascript">
+var s_prefix="livesql:en-us:";
+s_pageName = location.pathname.toLowerCase();
+var s_iNames = ["index.html","index.jsp","index.htm","index.shtml","index.xml","index.jhtml","index.jshtml","index.jspa","index.php","index.asp"];
+for (var a=0; a<s_iNames.length; a++) {
+var s_iName = "/"+s_iNames[a];
+if (s_pageName.indexOf(s_iName) > -1 && s_pageName.indexOf(s_iName) == s_pageName.length - s_iName.length) {
+s_pageName = s_pageName.substring(0, s_pageName.length - s_iNames[a].length);
+}
+}
+s_pageName = s_prefix + s_pageName;
+</script>
+<script language="JavaScript" src="https://www.oracleimg.com/us/assets/metrics/ora_otn.js">
+</script>
+<!-- End SiteCatalyst code --></body>
+                </html>
